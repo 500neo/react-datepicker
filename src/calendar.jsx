@@ -248,7 +248,7 @@ export default class Calendar extends React.Component {
     if (!this.props.forceShowMonthNavigation && allDaysDisabledBefore(this.state.date, 'month', this.props)) {
       return
     }
-    return <a
+    return <span
       className="react-datepicker__navigation react-datepicker__navigation--previous"
       onClick={this.decreaseMonth} />
   }
@@ -266,7 +266,7 @@ export default class Calendar extends React.Component {
       classes.push('react-datepicker__navigation--next--with-today-button')
     }
 
-    return <a
+    return <span
       className={classes.join(' ')}
       onClick={this.increaseMonth} />
   }
